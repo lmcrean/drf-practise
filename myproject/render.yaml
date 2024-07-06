@@ -9,7 +9,7 @@ services:
     env: python
     plan: free
     buildCommand: "pip install -r myproject/requirements.txt && python myproject/manage.py collectstatic --noinput && python myproject/manage.py migrate"
-    startCommand: "gunicorn myproject.wsgi:application"
+    startCommand: "PYTHONPATH=/opt/render/project/src gunicorn myproject.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: myproject.settings
