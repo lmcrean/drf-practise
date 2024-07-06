@@ -17,3 +17,5 @@ services:
         generateValue: true
       - key: ALLOWED_HOSTS
         value: my-drf-app.onrender.com
+        key: DATABASE_URL
+        value: postgresql://my_database_0jkb_user:oRsLKqo9HGQePCmmRgYGMXedUZWTBNpc@dpg-cq4jau5ds78s73cl6650-a/my_database_0jkb
