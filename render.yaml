@@ -2,7 +2,6 @@ databases:
   - name: my-database
     plan: free
     region: oregon
-    postgresVersion: 13
 
 services:
   - type: web
