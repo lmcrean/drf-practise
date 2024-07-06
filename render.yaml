@@ -8,11 +8,11 @@ services:
     name: my-drf-app
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
-    startCommand: "gunicorn myproject.wsgi"
+    buildCommand: "pip install -r myproject/requirements.txt && python myproject/manage.py collectstatic --noinput && python myproject/manage.py migrate"
+    startCommand: "gunicorn myproject.myproject.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: myproject.settings
+        value: myproject.myproject.settings
       - key: SECRET_KEY
         generateValue: true
       - key: ALLOWED_HOSTS
