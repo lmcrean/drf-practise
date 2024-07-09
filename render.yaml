@@ -12,7 +12,7 @@ services:
     startCommand: "gunicorn django_project.core.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: core.settings
+        value: django_project.core.settings
       - key: SECRET_KEY
         generateValue: true
       - key: ALLOWED_HOSTS
